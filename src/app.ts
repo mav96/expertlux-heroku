@@ -13,14 +13,12 @@ import path from "path";
 // http://jsman.ru/express/
 const app = express();
 const logger = morgan("combined");
-const environment = app.get("env");
+const environment = app.get("env") || "development";
 const hbs = exphbs.create({
     defaultLayout: "default",
     extname: ".html",
     helpers: {
-        environment: environment,
-        release: environment === "production",
-        debug: environment === "development",
+        isRelease: environment !== "development",
     },
     layoutsDir: "views/layouts",
     partialsDir: "views/partials",
