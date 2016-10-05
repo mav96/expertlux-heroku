@@ -44,7 +44,7 @@ const fonts = () => copy([
         ], "build/content/fonts")
 const develop = series(clear, parallel(serverCode, serverViews, favicons, images, otherFiles, scripts, styles, libs, fonts));
 const release = series(clear, parallel(serverCode, serverViews, favicons, images, otherFiles, scriptsMin, stylesMin));
-const isDebug = () => environment == "development";
-const build = isDebug ? develop : release;
+const isRelease = () => environment !== "development";
+const build = isRelease ? release : develop;
 export {develop, release, build}
 export default build;
