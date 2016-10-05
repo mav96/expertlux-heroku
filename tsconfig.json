@@ -1,0 +1,16 @@
+{
+    "filesGlob": [
+        "typings/index.d.ts",
+        "src/**/*.ts"
+    ],
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es2015",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "outDir": "build",
+        "removeComments": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true
+    }
+}

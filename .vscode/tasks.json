@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // http://xabikos.com/2015/11/11/Execute-multiple-npm-scripts-through-VS-Code-task-runner/
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "args": [
+        "run"
+    ],
+    "isWatching": false,
+    "tasks": [
+        {
+            "taskName": "build-develop",
+            "args": [],
+            "isBuildCommand": true,
+            "isWatching": false,
+            "problemMatcher": [
+                "$lessCompile",
+                "$tsc",
+                "$jshint",
+                "$jshint-stylish"
+            ]
+        },
+        {
+            "taskName": "build-release",
+            "args": [],
+            "isBuildCommand": true,
+            "isWatching": false,
+            "problemMatcher": [
+                "$lessCompile",
+                "$tsc",
+                "$jshint",
+                "$jshint-stylish"
+            ]
+        }
+    ]
+}

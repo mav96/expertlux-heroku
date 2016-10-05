@@ -1,0 +1,21 @@
+{
+  "name": "expertlux-heroku",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Васильев Петр Сергеевич <vasilev@proitr.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/vahpetr/expertlux-heroku",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3"
+  }
+}
