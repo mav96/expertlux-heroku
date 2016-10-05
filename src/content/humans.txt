@@ -1,0 +1,11 @@
+/* TEAM */
+	Web designer: Vasilev Pyotr
+	Contact: vahpetr [at] gmail.com
+	Twitter: @vahpetr
+	From: Perm, Russia
+
+/* SITE */
+	Last update: 2016
+	Language: Russian
+	Doctype:HTML5
+	IDE: Visual Studio Code

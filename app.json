@@ -1,0 +1,12 @@
+{
+  "name": "Expertlux Heroku",
+  "description": "TODO: Add a short description about Expertlux Heroku",
+  "repository": "https://github.com/vahpetr/expertlux-heroku.git",
+  "keywords": [
+    "small",
+    "sharp",
+    "tool"
+  ],
+  "addons": [],
+  "env": {}
+}
