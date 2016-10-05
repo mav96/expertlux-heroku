@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "6"
+    "node": "6.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "bower install && typings install",
+    "start": "gulp build && cd build && node app.js",
+    "build": "gulp build",
     "build-develop": "gulp develop",
     "build-release": "gulp release"
   },
