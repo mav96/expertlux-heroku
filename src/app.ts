@@ -10,6 +10,7 @@ import compression from "compression";
 import responseTime from "response-time";
 import path from "path";
 
+// http://jsman.ru/express/
 const app = express();
 const logger = morgan("combined");
 const environment = app.get("env");

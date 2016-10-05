@@ -33,6 +33,7 @@ const stylesMin = () => src("src/content/styles/**/*.css", {base: '.'})
         .pipe(dest("build/content"));
 const libs = () => copy([
         "bower_components/bootstrap/dist/css/bootstrap.css",
+        "bower_components/bootstrap/dist/css/bootstrap.css.map",
         "bower_components/font-awesome/css/font-awesome.css"
         ], "build/content/libs")
 const fonts = () => copy([
@@ -41,4 +42,4 @@ const fonts = () => copy([
 const develop = series(clear, parallel(serverCode, serverViews, favicons, images, otherFiles, libs, scripts, styles, fonts));
 const release = series(clear, parallel(serverCode, serverViews, favicons, images, otherFiles, scriptsMin, stylesMin));
 export default develop;
-export {release}
+export {develop, release}
