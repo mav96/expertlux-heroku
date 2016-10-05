@@ -12,7 +12,7 @@
     "isWatching": false,
     "tasks": [
         {
-            "taskName": "build-develop",
+            "taskName": "build",
             "args": [],
             "isBuildCommand": true,
             "isWatching": false,
@@ -24,9 +24,21 @@
             ]
         },
         {
+            "taskName": "build-develop",
+            "args": [],
+            "isBuildCommand": false,
+            "isWatching": false,
+            "problemMatcher": [
+                "$lessCompile",
+                "$tsc",
+                "$jshint",
+                "$jshint-stylish"
+            ]
+        },
+        {
             "taskName": "build-release",
             "args": [],
-            "isBuildCommand": true,
+            "isBuildCommand": false,
             "isWatching": false,
             "problemMatcher": [
                 "$lessCompile",

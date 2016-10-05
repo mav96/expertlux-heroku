@@ -14,7 +14,6 @@ import path from "path";
 const app = express();
 const logger = morgan("combined");
 const environment = app.get("env");
-console.log(environment)
 const hbs = exphbs.create({
     defaultLayout: "default",
     extname: ".html",
@@ -86,8 +85,8 @@ switch (environment) {
 
 const port = process.env.PORT || 5000;
 app.set("port", port);
-app.listen(port, function () {
-    console.log("Node app is running on port", port);
+app.listen(port, () => {
+    console.log(`Express app is running on port ${port} in ${environment} mode`);
 });
 
 export default app;

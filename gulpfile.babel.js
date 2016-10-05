@@ -8,6 +8,9 @@ import cssmin from "gulp-cssmin";
 import concat from "gulp-concat";
 import fs from "fs";
 
+const environment = process.env.NODE_ENV || "development";
+console.log(`gulp environment: ${environment}`)
+
 const clear = () => src("build", { read: false, allowEmpty: true }).pipe(rimraf({ force: true }));
 const copy = (source, target) => src(source).pipe(dest(target));
 const tsconfig = JSON.parse(fs.readFileSync("tsconfig.json"));
@@ -39,7 +42,9 @@ const libs = () => copy([
 const fonts = () => copy([
         "bower_components/font-awesome/fonts/*.*"
         ], "build/content/fonts")
-const develop = series(clear, parallel(serverCode, serverViews, favicons, images, otherFiles, libs, scripts, styles, fonts));
+const develop = series(clear, parallel(serverCode, serverViews, favicons, images, otherFiles, scripts, styles, libs, fonts));
 const release = series(clear, parallel(serverCode, serverViews, favicons, images, otherFiles, scriptsMin, stylesMin));
-export default develop;
-export {develop, release}
+const isDebug = () => environment == "development";
+const build = isDebug ? develop : release;
+export {develop, release, build}
+export default build;
