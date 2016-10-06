@@ -1,6 +1,7 @@
 {
     "filesGlob": [
         "typings/index.d.ts",
+        "definitions/**/*.d.ts",
         "src/**/*.ts"
     ],
     "compilerOptions": {
