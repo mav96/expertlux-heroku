@@ -5,10 +5,10 @@
             "name": "Запустить",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/build/app.js",
+            "program": "${workspaceRoot}/src/app.ts",
             "stopOnEntry": false,
             "args": [],
-            "cwd": "${workspaceRoot}/build",
+            "cwd": "${workspaceRoot}/src",
             "preLaunchTask": null,
             "runtimeExecutable": null,
             "runtimeArgs": [
@@ -18,8 +18,8 @@
                 "NODE_ENV": "development"
             },
             "console": "internalConsole",
-            "sourceMaps": false,
-            "outDir": null
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/build"
         },
         {
             "name": "Подключить",
