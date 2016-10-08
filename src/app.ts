@@ -1,4 +1,4 @@
-import "babel-polyfill";
+// import "babel-polyfill";
 import { Request, Response, NextFunction } from "express";
 import express from "express";
 import morgan from "morgan";
@@ -11,6 +11,7 @@ import compression from "compression";
 import responseTime from "response-time";
 import minifyHTML from "express-minify-html";
 import path from "path";
+import helmet from "helmet";
 
 // http://jsman.ru/express/
 const app = express();
@@ -29,7 +30,7 @@ const hbs = exphbs.create({
 app.engine(".html", hbs.engine);
 app.set("view engine", ".html");
 app.set("views", path.join(__dirname, "views"));
-app.set("x-powered-by", false);
+app.use(helmet());
 
 if (environment === "production") {
     app.use(minifyHTML({

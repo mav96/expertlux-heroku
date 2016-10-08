@@ -4,7 +4,7 @@ import MailService from "../services/mailgun-service";
 
 const ctrl = Router();
 
-ctrl.post("/", bodyParser.json(), async (req: Request, res: Response, next: NextFunction) => {
+ctrl.post("/", bodyParser.json(), (req: Request, res: Response, next: NextFunction) => {
     let request = req.body as CrierRequest;
     let from = process.env.MAILGUN_FROM;
     let to = process.env.MAILGUN_TO;

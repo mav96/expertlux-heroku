@@ -8,6 +8,7 @@
     "express-handlebars": "registry:dt/express-handlebars#0.0.0+20160316155526",
     "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20160928124223",
     "gulp-sourcemaps": "registry:dt/gulp-sourcemaps#0.0.0+20160316155526",
+    "helmet": "registry:dt/helmet#0.0.0+20160930124002",
     "html-minifier": "registry:dt/html-minifier#1.1.1+20160316155526",
     "method-override": "registry:dt/method-override#0.0.0+20160925094606",
     "mime": "registry:dt/mime#0.0.0+20160316155526",
