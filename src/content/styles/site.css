@@ -439,7 +439,7 @@ a:hover, a:focus {
 
 .map{
     height: 255px;
-    background: url(../images/map.gif) no-repeat center center;
+    background: url(../images/map.png) no-repeat center center;
     background-size: cover;
     margin-top: 15px;
 }
