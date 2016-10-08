@@ -10,6 +10,7 @@ export default class MailgunService {
             Authorization: `Basic ${token}`,
             "Content-Type": "application/x-www-form-urlencoded",
         };
+        console.log(`Send email from ${from} to ${to} subject ${subject} text ${text} domain ${domain} key ${key}`);
         return fetch(url, {
             body: body,
             headers: headers,
