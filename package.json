@@ -45,6 +45,7 @@
     "gulp-sourcemaps": "1.6.0",
     "gulp-typescript": "3.0.1",
     "gulp-uglify": "2.0.0",
+    "helmet": "2.3.0",
     "method-override": "2.3.6",
     "morgan": "1.7.0",
     "node-fetch": "1.6.3",

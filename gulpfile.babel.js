@@ -21,7 +21,7 @@ const serverCode = () => src(tsconfig.filesGlob)
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(tsProject()).js 
         .pipe(babel({
-                presets: ["es2015", "stage-0"]
+                presets: ["es2015", "stage-3"]
         }))
         // .pipe(concat('app.js'))
         .pipe(sourcemaps.write('./', { sourceRoot: "./" }))
