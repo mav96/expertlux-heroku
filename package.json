@@ -47,7 +47,6 @@
     "gulp-uglify": "2.0.0",
     "method-override": "2.3.6",
     "morgan": "1.7.0",
-    "newrelic": "1.30.5",
     "node-fetch": "1.6.3",
     "response-time": "2.3.1",
     "serve-favicon": "2.3.0",

@@ -1,9 +1,3 @@
-const NODE_ENV = process.env.NODE_ENV || "development"; // production
-
-if (NODE_ENV === "production") {
- require("newrelic");
-}
-
 import "babel-polyfill";
 import { Request, Response, NextFunction } from "express";
 import express from "express";
@@ -21,7 +15,7 @@ import path from "path";
 // http://jsman.ru/express/
 const app = express();
 const logger = morgan("combined");
-const environment = app.get("env") || NODE_ENV;
+const environment = app.get("env") || "development"; // production
 const hbs = exphbs.create({
     defaultLayout: "default",
     extname: ".html",
@@ -90,7 +84,7 @@ import mailController from "./controllers/mail-controller";
 app.use("/api/mail", mailController);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-    // :${req.app.settings.port}
+    //:${req.app.settings.port}
     let url = `${req.protocol}://${req.hostname}${req.originalUrl}`;
     let err: any = new Error(`Not Found. Url: ${url}`);
     err.status = 404;
