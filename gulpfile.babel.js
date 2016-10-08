@@ -29,7 +29,10 @@ const serverCode = () => src(tsconfig.filesGlob)
 const serverViews = () => copy("src/views/**/*.html", "build/views");
 const favicons = () => copy("src/content/favicons/**/*.*", "build/content/favicons");
 const images = () => copy("src/content/images/**/*.*", "build/content/images");
-const otherFiles = () => copy(["src/content/robots.txt", "src/content/humans.txt"], "build/content");
+const otherFiles = () => copy([
+        "src/content/robots.txt",
+        "src/content/humans.txt",
+        "src/content/sitemap.xml"], "build/content");
 const scripts = () => copy("src/content/scripts/**/*.js", "build/content/scripts");
 const styles = () => copy("src/content/styles/**/*.css", "build/content/styles");
 const scriptsMin = () => src("src/content/scripts/**/*.js", { base: '.' })
