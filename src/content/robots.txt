@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 Host: expertlux.com
-Sitemap: /sitemap.xml
+Sitemap: https://expertlux.com/sitemap.xml
